@@ -320,37 +320,19 @@ export class AppComponent {
 }
 ```
 
-## 4. Deploy to Production
+## Next Steps
+
+You check out [introduction guide to Cube.js schema][link-cubejs-schema] to learn more about modelling
+your data.
+
+To learn more about integrations with client libraries and frameworks check out
+[frontend libraries introduction guide][link-frontend-intro].
 
 Cube.js has first-class deployment support for [Docker][link-docker] and the
-[Serverless Framework][link-serverless-framework].
+[Serverless Framework][link-serverless-framework]. For more information on deploying, please consult the
+[Deployment Guide][link-docker-deployment-guide].
 
 [link-docker]: https://www.docker.com/
 [link-serverless-framework]: https://www.serverless.com/
-
-### Docker
-
-For more information on deploying our official Docker image, please consult the
-[Deployment Guide][link-docker-deployment-guide].
-
 [link-docker-deployment-guide]: /deployment#docker
 
-```bash
-$ docker run --rm \
-  --name cubejs-docker-demo \
-  -e CUBEJS_API_SECRET=<YOUR-API-SECRET> \
-  -e CUBEJS_DB_HOST=<YOUR-DB-HOST-HERE> \
-  -e CUBEJS_DB_NAME=<YOUR-DB-NAME-HERE> \
-  -e CUBEJS_DB_USER=<YOUR-DB-USER-HERE> \
-  -e CUBEJS_DB_PASS=<YOUR-DB-PASS-HERE> \
-  -e CUBEJS_DB_TYPE=postgres \
-  --volume "$(pwd):/cube/conf" \
-  <YOUR-USERNAME>/cubejs-docker-demo
-```
-
-### Serverless
-
-For more information on deploying with the Serverless Framework, consult the
-[Deployment Guide][link-sls-aws-deployment-guide].
-
-[link-sls-aws-deployment-guide]: /deployment#aws-serverless-deploy
