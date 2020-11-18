@@ -1,0 +1,53 @@
+version = 1
+
+test_patterns = ["*/test/**"]
+
+[[analyzers]]
+name = "javascript"
+enabled = true
+
+  [analyzers.meta]
+  environment = ["jest"]
+  plugins = [
+    "vue",
+    "react"
+  ]
+  dialect = "typescript"
+  style_guide = "airbnb"
+  dependency_file_paths = [
+    "packages/cubejs-api-gateway",
+    "packages/cubejs-athena-driver",
+    "packages/cubejs-backend-shared",
+    "packages/cubejs-bigquery-driver",
+    "packages/cubejs-cli",
+    "packages/cubejs-clickhouse-driver",
+    "packages/cubejs-client-core",
+    "packages/cubejs-client-ngx",
+    "packages/cubejs-client-react",
+    "packages/cubejs-client-vue",
+    "packages/cubejs-client-ws-transport",
+    "packages/cubejs-cubestore-driver",
+    "packages/cubejs-docker",
+    "packages/cubejs-dremio-driver",
+    "packages/cubejs-druid-driver",
+    "packages/cubejs-elasticsearch-driver",
+    "packages/cubejs-hive-driver",
+    "packages/cubejs-jdbc-driver",
+    "packages/cubejs-mongobi-driver",
+    "packages/cubejs-mssql-driver",
+    "packages/cubejs-mysql-aurora-serverless-driver",
+    "packages/cubejs-mysql-driver",
+    "packages/cubejs-oracle-driver",
+    "packages/cubejs-playground",
+    "packages/cubejs-postgres-driver",
+    "packages/cubejs-prestodb-driver",
+    "packages/cubejs-query-orchestrator",
+    "packages/cubejs-schema-compiler",
+    "packages/cubejs-server-core",
+    "packages/cubejs-server",
+    "packages/cubejs-serverless-aws",
+    "packages/cubejs-serverless-google",
+    "packages/cubejs-serverless",
+    "packages/cubejs-snowflake-driver",
+    "packages/cubejs-sqlite-driver"
+  ]
